@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teori Warna untuk Desain Digital — UTS Multimedia</title>
+    <meta
+      name="description"
+      content="Presentasi interaktif tentang teori warna untuk desain digital."
+    />
+    <meta name="theme-color" content="#6366f1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <main>
+      <!-- 1 Judul -->
+      <section class="slide active" id="slide1">
+        <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
+        <div class="fan" aria-hidden="true">
+          <span style="background: #ef4444"></span
+          ><span style="background: #facc15"></span
+          ><span style="background: #22c55e"></span
+          ><span style="background: #3b82f6"></span
+          ><span style="background: #a855f7"></span>
+        </div>
+        <h1>Teori Warna<br />untuk Desain Digital</h1>
+        <p class="subtitle">
+          Psikologi warna, harmoni, dan aksesibilitas di web
+        </p>
+        <div class="student-info">
+          <p class="student-name">
+            Nama: <strong>Muhammad Ainun Ghofur</strong>
+          </p>
+          <p class="student-detail">NPM: 1412240058 | TIF 2024 C</p>
+        </div>
+        <p class="hint">Tekan Berikutnya atau → untuk lanjut</p>
+        <div class="marquee" aria-hidden="true"><div></div></div>
+      </section>
+
+      <!-- 2 Agenda -->
+      <section class="slide" id="slide2">
+        <h2>Tujuan & Agenda</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>1. Dasar Teori Warna</h3>
+            <p>Roda warna, harmoni, dan model warna digital (RGB, HSL, HEX).</p>
+          </div>
+          <div class="card">
+            <h3>2. Psikologi Warna</h3>
+            <p>Makna warna dan pengaruhnya pada persepsi pengguna.</p>
+          </div>
+          <div class="card">
+            <h3>3. Aksesibilitas (WCAG)</h3>
+            <p>Kontras warna dan desain ramah pengguna buta warna.</p>
+          </div>
+          <div class="card">
+            <h3>4. Studi Kasus Nyata</h3>
+            <p>Shopee vs Tokopedia, Google, dan platform streaming.</p>
+          </div>
+        </div>
+        <p class="mt-25">
+          <strong>Tujuan:</strong> mampu memilih palet warna yang efektif,
+          inklusif, dan estetis.
+        </p>
+      </section>
+
+      <!-- 3 Roda Warna -->
+      <section class="slide" id="slide3">
+        <h2>Roda Warna</h2>
+        <div class="wheel" aria-hidden="true"></div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Primer</h3>
+            <p>
+              Merah, biru, kuning. Tidak bisa dibuat dari campuran warna lain.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Sekunder</h3>
+            <p>Hijau, oranye, ungu. Campuran 2 warna primer.</p>
+          </div>
+          <div class="card">
+            <h3>Tersier</h3>
+            <p>Primer + sekunder, misalnya biru-hijau.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 HSL -->
+      <section class="slide" id="slide4">
+        <h2>Interaktif: Model Warna</h2>
+        <p>
+          Geser slider untuk melihat warna terbentuk dari <strong>HSL</strong>,
+          <strong>HEX</strong>, dan <strong>RGB</strong>.
+        </p>
+        <div id="colorPreview" class="hsl-demo">Pratinjau</div>
+        <div class="slider-wrap">
+          <label class="slider-label" for="hSlider"
+            >Rona (Hue): <span id="hVal">220</span>°</label
+          >
+          <input type="range" id="hSlider" min="0" max="360" value="220" />
+          <label class="slider-label" for="sSlider"
+            >Saturasi: <span id="sVal">70</span>%</label
+          >
+          <input type="range" id="sSlider" min="0" max="100" value="70" />
+          <label class="slider-label" for="lSlider"
+            >Kecerahan (Lightness): <span id="lVal">50</span>%</label
+          >
+          <input type="range" id="lSlider" min="0" max="100" value="50" />
+          <p id="hexOutput" class="hex-output">HEX: #2662d9</p>
+          <p id="rgbOutput" class="hex-output">RGB: rgb(38, 98, 217)</p>
+        </div>
+      </section>
+
+      <!-- 5 Harmoni -->
+      <section class="slide" id="slide5">
+        <h2>Harmoni Warna</h2>
+        <p>
+          Kombinasi warna yang seimbang. Klik sebuah palet untuk menjelajah.
+        </p>
+        <div class="interactive-panel" id="harmonyPanel"></div>
+        <p id="harmonyDesc" class="harmony-desc"></p>
+      </section>
+
+      <!-- 6 Psikologi -->
+      <section class="slide" id="slide6">
+        <h2>Psikologi Warna</h2>
+        <div class="grid grid-2">
+          <div class="card border-red">
+            <h3 class="c-red">Merah</h3>
+            <p>
+              Energi, urgensi, ajakan bertindak (CTA). Contoh: tombol "Beli
+              Sekarang".
+            </p>
+          </div>
+          <div class="card border-blue">
+            <h3 class="c-blue">Biru</h3>
+            <p>Kepercayaan, profesional, teknologi. Contoh: LinkedIn, bank.</p>
+          </div>
+          <div class="card border-green">
+            <h3 class="c-green">Hijau</h3>
+            <p>Pertumbuhan, kesehatan, keuangan. Contoh: WhatsApp, Spotify.</p>
+          </div>
+          <div class="card border-yellow">
+            <h3 class="c-yellow">Kuning</h3>
+            <p>Optimisme, perhatian, peringatan. Contoh: highlight, rambu.</p>
+          </div>
+        </div>
+        <p class="ref">
+          <em
+            >Makna warna bergantung konteks dan budaya; risetnya masih
+            berkembang (Elliot & Maier, 2014).</em
+          >
+        </p>
+      </section>
+
+      <!-- 7 Kasus 1 -->
+      <section class="slide" id="slide7">
+        <h2>Kasus 1: Shopee vs Tokopedia</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Shopee</h3>
+            <div class="flex mt-10">
+              <div class="demo-box" style="background: #ee4d2d; color: #fff">
+                Oranye
+              </div>
+            </div>
+            <p class="mt-15">
+              Oranye identik dengan energi dan promo, dipakai konsisten di logo,
+              banner, dan tombol.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Tokopedia</h3>
+            <div class="flex mt-10">
+              <div class="demo-box" style="background: #03ac0e; color: #fff">
+                Hijau
+              </div>
+            </div>
+            <p class="mt-15">
+              Hijau identik dengan kepercayaan dan pertumbuhan, memberi kesan
+              aman bertransaksi.
+            </p>
+          </div>
+          <div class="card span-2">
+            <h3>Pelajaran</h3>
+            <p>
+              Dua pesaing langsung memilih warna berbeda agar mudah dibedakan.
+              Warna utama membangun citra merek, warna aksen mengarahkan
+              perhatian.
+            </p>
+          </div>
+        </div>
+        <p class="ref">
+          <em
+            >Sumber: tampilan resmi aplikasi/situs Shopee dan Tokopedia. Warna
+            merek asli, bukan contoh yang lulus AA.</em
+          >
+        </p>
+      </section>
+
+      <!-- 8 Kasus 2 -->
+      <section class="slide" id="slideGoogle">
+        <h2>Kasus 2: 41 Corak Biru Google</h2>
+        <div
+          class="shades"
+          id="shades"
+          role="img"
+          aria-label="41 corak biru dari gelap ke terang"
+        ></div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Kejadian</h3>
+            <p>
+              Menurut desainer Douglas Bowman, tim Google tak bisa memilih
+              antara dua biru, lalu menguji 41 corak di antaranya untuk melihat
+              mana yang berkinerja terbaik.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Pelajaran</h3>
+            <p>
+              Data uji membantu memilih warna, tetapi terlalu banyak keputusan
+              kecil bisa menggeser penilaian visual. Google menyebut ceritanya
+              tidak sepenuhnya akurat.
+            </p>
+          </div>
+        </div>
+        <p class="ref">
+          <em>Sumber: Fortune (2009); MIT Technology Review (2014).</em>
+        </p>
+      </section>
+
+      <!-- 9 Kasus 3 -->
+      <section class="slide" id="slide12">
+        <h2>Kasus 3: Platform Streaming</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Palet Warna</h3>
+            <div class="eq" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="flex gap-10 mb-15">
+              <div
+                class="swatch-sq"
+                aria-hidden="true"
+                style="background: #e50914"
+              ></div>
+              <div
+                class="swatch-sq"
+                aria-hidden="true"
+                style="background: #141414"
+              ></div>
+              <div
+                class="swatch-sq"
+                aria-hidden="true"
+                style="background: #fff"
+              ></div>
+            </div>
+            <p>
+              Merah agresif (gaya merek Netflix) + latar gelap agar konten video
+              menonjol.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Psikologi</h3>
+            <p>
+              Merah = urgensi "tonton sekarang". Mode gelap = fokus ke konten
+              dan mendukung <em>waktu menonton</em>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 Aksesibilitas -->
+      <section class="slide" id="slideAcc">
+        <h2>Aksesibilitas: Kontras & Buta Warna</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Kontras WCAG</h3>
+            <p>
+              Teks normal minimal <strong>4.5:1</strong>, teks besar
+              <strong>3:1</strong>.
+            </p>
+            <div class="compare mt-15">
+              <div class="compare-box" style="background: #fff">
+                <h3 style="color: #000">✅ Lulus</h3>
+                <p style="color: #000">#000 di #fff<br />21:1</p>
+              </div>
+              <div class="compare-box" style="background: #aaa">
+                <h3 style="color: #ddd">❌ Gagal</h3>
+                <p style="color: #ddd">#ddd di #aaa<br />1.7:1</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Buta Warna</h3>
+            <p>Sekitar 8% pria dan 0,5% wanita. Jangan andalkan warna saja!</p>
+            <div class="flex-center gap-10 mt-15">
+              <div
+                class="circle"
+                aria-hidden="true"
+                style="background: #ef4444"
+              ></div>
+              <div
+                class="circle"
+                aria-hidden="true"
+                style="background: #22c55e"
+              ></div>
+              <span>❌ hanya warna</span>
+            </div>
+            <div class="flex-center gap-10 mt-10">
+              <div class="badge" style="background: #b91c1c">✕ Gagal</div>
+              <div class="badge" style="background: #15803d">✓ Berhasil</div>
+              <span>✅ warna + ikon + label</span>
+            </div>
+          </div>
+        </div>
+        <p class="ref">
+          <em>Sumber: W3C WCAG 1.4.3; Colour Blind Awareness.</em>
+        </p>
+      </section>
+
+      <!-- 11 Lakukan & Hindari -->
+      <section class="slide" id="slide10">
+        <h2>Lakukan & Hindari</h2>
+        <div class="do-dont">
+          <div class="card do">
+            <h3>✅ LAKUKAN</h3>
+            <ul>
+              <li>Maksimal 3 warna utama + 2 netral</li>
+              <li>Uji kontras dengan WebAIM Contrast Checker</li>
+              <li>Konsisten di seluruh design system</li>
+              <li>Pertimbangkan mode gelap</li>
+            </ul>
+          </div>
+          <div class="card dont">
+            <h3>❌ HINDARI</h3>
+            <ul>
+              <li>Terlalu banyak warna (seperti pelangi)</li>
+              <li>Kombinasi merah-hijau untuk status</li>
+              <li>Warna solid mencolok untuk teks panjang</li>
+              <li>Mengabaikan konteks budaya pengguna</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 Video -->
+      <section class="slide" id="slideVideo">
+        <h2>Video Pembelajaran</h2>
+        <div class="video-box" id="videoFrame"></div>
+        <p class="video-caption" id="videoCaption"></p>
+      </section>
+
+      <!-- 13 Kuis -->
+      <section class="slide" id="slide13">
+        <h2>Kuis Cepat</h2>
+        <div class="quiz-box" id="quizBox">
+          <div class="quiz-top">
+            <span id="quizStep">Soal 1 / 7</span
+            ><span id="quizScore">Skor: 0</span>
+          </div>
+          <div class="quiz-bar" aria-hidden="true">
+            <div id="quizBarFill"></div>
+          </div>
+          <div id="quizQuestion">
+            <p class="quiz-q" id="quizQ"></p>
+            <div class="quiz-wrap" id="quizOptions"></div>
+            <p class="quiz-feedback" id="feedback" aria-live="polite"></p>
+            <button type="button" class="quiz-next" id="quizNext" hidden>
+              Soal berikutnya →
+            </button>
+          </div>
+          <div class="quiz-result" id="quizResult" hidden>
+            <div class="quiz-emoji" id="resEmoji" aria-hidden="true"></div>
+            <h3 id="resTitle" tabindex="-1"></h3>
+            <p class="quiz-final" id="resScore"></p>
+            <p id="resMsg"></p>
+            <ul
+              class="quiz-trail"
+              id="resTrail"
+              aria-label="Rekap jawaban"
+            ></ul>
+            <p class="quiz-best" id="resBest"></p>
+            <button type="button" class="quiz-next" id="quizRestart">
+              ↺ Ulangi kuis
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14 Kesimpulan -->
+      <section class="slide" id="slide14">
+        <h2>Kesimpulan & Sumber</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Poin Penting</h3>
+            <p class="takeaways">
+              ✓ Pahami roda warna & harmoni<br />✓ Warna = komunikasi, bukan
+              dekorasi<br />✓ Aksesibilitas wajib (WCAG 4.5:1)<br />✓ Konteks &
+              budaya memengaruhi makna<br />✓ Uji dengan pengguna nyata!
+            </p>
+          </div>
+          <div>
+            <ul class="resource-list">
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C — WCAG 1.4.3 Contrast (Minimum)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.colourblindawareness.org/colour-blindness/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Colour Blind Awareness</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://doi.org/10.1146/annurev-psych-010213-115035"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Elliot & Maier (2014), Annu. Rev. Psychol.</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://fortune.com/2009/03/21/are-googles-nerds-destroying-design/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Fortune (2009) — Google & 41 biru</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://webaim.org/resources/contrastchecker/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WebAIM Contrast Checker</a
+                >
+              </li>
+            </ul>
+            <p class="thanks">Terima kasih!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="nav" id="navBar" aria-label="Navigasi slide">
+      <div class="nav-side"><button id="prevBtn">← Sebelumnya</button></div>
+      <span class="counter" id="counter">1 / 14</span>
+      <div class="nav-side"><button id="nextBtn">Berikutnya →</button></div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script src="fx.js"></script>
+  </body>
+</html>
