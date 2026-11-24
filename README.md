@@ -2,8 +2,8 @@
 
 Presentasi web interaktif tentang teori warna, psikologi warna, dan aksesibilitas warna untuk desain digital. Dibuat untuk **UTS Multimedia (Opsi 1: Presentasi Interaktif)** dengan HTML, CSS, dan JavaScript murni.
 
-- **Live presentation:** `ISI_LINK_GITHUB_PAGES_ATAU_VERCEL`
-- **Repository:** `ISI_LINK_REPOSITORY_GITHUB`
+- **Live presentation:** `(https://Ghofur0505.github.io/UTS_Multimedia_Ppt_Interaktif_058/)`
+- **Repository:** `(https://github.com/Ghofur0505/UTS_Multimedia_Ppt_Interaktif_058)`
 
 ## Identitas
 
